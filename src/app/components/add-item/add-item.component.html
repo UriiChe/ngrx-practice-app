@@ -1,0 +1,34 @@
+<form #form (ngSubmit)="addItem">
+  <div class="form-control">
+    <label for="name">Item name</label>
+    <input type="text"
+           class="form-control"
+           [(ngModel)]="item.name"
+           name="name"
+           id="name"
+           required
+           >
+  </div>
+  <div class="form-control">
+    <label for="description">Item name</label>
+    <input type="text"
+           class="form-control"
+           [(ngModel)]="item.description"
+           name="description"
+           id="description"
+           required
+           >
+  </div>
+  <div class="form-control">
+    <label for="price">Item name</label>
+    <input type="number"
+           class="form-control"
+           [(ngModel)]="item.price"
+           name="price"
+           id="price"
+           required
+           >
+  </div>
+  <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Add</button>
+  <button class="btn btn-success"> <= Go back</button>
+</form>
